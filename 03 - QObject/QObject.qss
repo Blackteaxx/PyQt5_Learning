@@ -1,0 +1,11 @@
+QLabel#notice{
+    font-size: 20px;
+    color: gray;
+    border: lpx solid gray;
+    border-radius: 8px;
+}
+
+QLabel#notice[notice_level = 'normal'] {
+    color:green;
+    border-color:green;
+}
