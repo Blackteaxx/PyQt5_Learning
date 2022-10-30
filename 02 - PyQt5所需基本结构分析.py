@@ -1,5 +1,5 @@
 # 0. 导入所需要的包和模块
-from PyQt5.Qt import * # 包含了我们常用的一些类，汇总到了一块
+from PyQt5.Qt import *  # 包含了我们常用的一些类，汇总到了一块
 import sys
 
 # 1. 创建一个应用程序对象
@@ -28,7 +28,6 @@ window = QWidget()
 window.setWindowTitle('Hello!!!')
 window.resize(400, 400)
 
-
 # 控件也可以作为一个容器（承载其他控件）
 label = QLabel(window)
 label.setText('XXX')
@@ -39,7 +38,6 @@ label.move(100, 50)
 # 如果控件有父控件，那么父控件展示之后，子控件自动展示
 window.show()
 
-
 # 3. 应用程序的执行，进入到消息循环
 # 让整个程序开始执行，并且进入到消息循环（无限循环）
 # 监测整个程序所收到的交互信息，将错误退出代码传给sys.exit()并退出
@@ -48,4 +46,3 @@ sys.exit(app.exec_())
 # #  explanation 3.1
 # # 告知时因为什么原因退出(退出代码)
 # sys.exit()
-
