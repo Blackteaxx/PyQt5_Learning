@@ -40,8 +40,14 @@
    <property name="text">
     <string>菜单</string>
    </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="register_restart_btn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -56,8 +62,14 @@
    <property name="text">
     <string>重置</string>
    </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="register_exit_btn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -72,8 +84,14 @@
    <property name="text">
     <string>退出</string>
    </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QPushButton" name="register_about_btn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -88,14 +106,17 @@
    <property name="text">
     <string>关于</string>
    </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
   </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>110</x>
-     <y>70</y>
+     <y>60</y>
      <width>341</width>
-     <height>171</height>
+     <height>181</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -112,7 +133,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="register_username_text"/>
       </item>
      </layout>
     </item>
@@ -126,7 +147,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="register_password_text"/>
       </item>
      </layout>
     </item>
@@ -140,12 +161,18 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_3"/>
+       <widget class="QLineEdit" name="register_password2_text"/>
       </item>
      </layout>
     </item>
     <item>
      <widget class="QPushButton" name="register_register_btn">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="text">
        <string>注册</string>
       </property>
@@ -153,12 +180,24 @@
     </item>
    </layout>
   </widget>
+  <zorder>register_label_username</zorder>
+  <zorder>label_2</zorder>
+  <zorder>register_</zorder>
+  <zorder>register_username_text</zorder>
+  <zorder>register_password_text</zorder>
+  <zorder>register_password2_text</zorder>
+  <zorder>register_restart_btn</zorder>
+  <zorder>register_exit_btn</zorder>
+  <zorder>register_about_btn</zorder>
+  <zorder>register_menu_btn</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="../register_resource.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>register_menu_btn</sender>
-   <signal>clicked()</signal>
+   <signal>clicked(bool)</signal>
    <receiver>register_window</receiver>
    <slot>show_hide_menu()</slot>
    <hints>
