@@ -1,7 +1,5 @@
 from login_Panel import LoginPanel
 from register_Panel import RegisterPanel
-from testmssql import checklogin
-import pymssql
 from PyQt5.Qt import *
 import qdarkstyle
 

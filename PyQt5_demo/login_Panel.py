@@ -1,6 +1,5 @@
 from PyQt5.Qt import *
 from resource.ui.login import Ui_login
-from testmssql import checklogin
 import qdarkstyle
 
 

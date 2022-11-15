@@ -51,20 +51,6 @@
     <string>登入</string>
    </property>
   </widget>
-  <widget class="QGraphicsView" name="graphicsView">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>111</width>
-     <height>121</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border-image: url(:/image/image/loginimage.jpg);
-border-color: rgb(255, 255, 255);</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -78,10 +64,10 @@ border-color: rgb(255, 255, 255);</string>
     <string notr="true">font: 24pt &quot;Bahnschrift Condensed&quot;;</string>
    </property>
    <property name="text">
-    <string>TestGUI</string>
+    <string>NJUMusic</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -103,9 +89,7 @@ border-color: rgb(255, 255, 255);</string>
    </layout>
   </widget>
  </widget>
- <resources>
-  <include location="ui_resource.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>login_register_btn</sender>

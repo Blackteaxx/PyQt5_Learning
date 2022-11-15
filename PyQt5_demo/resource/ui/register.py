@@ -112,4 +112,3 @@ class Ui_register_window(object):
         self.register_.setText(_translate("register_window", "密    码："))
         self.label_2.setText(_translate("register_window", "确认密码："))
         self.register_register_btn.setText(_translate("register_window", "注册"))
-import register_resource_rc
