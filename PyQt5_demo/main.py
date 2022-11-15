@@ -1,5 +1,7 @@
 from login_Panel import LoginPanel
 from register_Panel import RegisterPanel
+from testmssql import checklogin
+import pymssql
 from PyQt5.Qt import *
 import qdarkstyle
 
@@ -22,13 +24,15 @@ if __name__ == '__main__':
     # setup stylesheet
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
 
+    # show window
     window = QWidget()
     loginpanel = LoginPanel(window)
     registerpanel = RegisterPanel(window)
     registerpanel.setVisible(False)
 
+    # connect slot
     loginpanel.show_registerPanel_signal.connect(show_registerPanel)
-    registerpanel.exit_signal.connect(lambda: return_loginPanel())
+    registerpanel.exit_signal.connect(return_loginPanel)
 
     window.show()
     sys.exit(app.exec_())

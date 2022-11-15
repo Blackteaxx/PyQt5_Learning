@@ -1,5 +1,6 @@
 from PyQt5.Qt import *
 from resource.ui.login import Ui_login
+from testmssql import checklogin
 import qdarkstyle
 
 
@@ -15,7 +16,12 @@ class LoginPanel(QWidget, Ui_login):
         self.show_registerPanel_signal.emit()
 
     def check_login(self):
-        print('pass')
+        userName = self.login_username_text.text()
+        passWord = self.login_password_text.text()
+        if checklogin(userName, passWord):
+            QMessageBox.about(self, 'Success', '连接成功！')
+        else:
+            QMessageBox.about(self, 'Fail', '连接失败！')
 
 
 if __name__ == '__main__':

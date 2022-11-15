@@ -15,6 +15,8 @@ class Window(QWidget):
         # self.QObject_Operation_On_ParentandChild()
         # self.QWidget_ParentandChild()
         # self.QObject_Signal()
+        # self.QObject_Type_Judge()
+        self.QObject_Delete_Object()
         pass
 
     def QObject_test(self):
@@ -192,6 +194,58 @@ class Window(QWidget):
         windown.setWindowTitle('Hello 3')
         windown.show()
         # ************案例2*******************end
+
+    def QObject_Type_Judge(self):
+        # ************API*******************start
+        # obj = QObject()
+        # w = QWidget()
+        # btn = QPushButton()
+        # label = QLabel()
+        #
+        # objs = [obj, w, btn, label]
+        # for o in objs:
+        #     # print(o.isWidgetType())
+        #     # print(o.inherits('QWidget'))
+        #     print(o.inherits('QPushButton'))
+        # ************API*******************end
+
+        # ************案例*******************start
+        label = QLabel(self)
+        label.setText('11111')
+        label.move(100, 100)
+        label2 = QLabel(self)
+        label2.setText('2222')
+        label2.move(150, 150)
+
+        btn = QPushButton(self)
+        btn.setText('点我')
+
+        # for widget in self.findChildren(QLabel):
+        #     print(widget)
+        for widget in self.children():
+            if widget.inherits('QLabel'):
+                widget.setStyleSheet("background:cyan;")
+        # ************案例*******************end
+
+    def QObject_Delete_Object(self):
+        self.obj1 = QObject()
+        obj2 = QObject()
+        obj3 = QObject()
+
+        obj2.setParent(self.obj1)
+        obj3.setParent(obj2)
+
+        self.obj1.destroyed.connect(lambda: print("被释放了"))
+        obj2.destroyed.connect(lambda: print("被释放了"))
+        obj3.destroyed.connect(lambda: print("被释放了"))
+
+        # 由于被引用，没有任何效果
+        # del obj2
+
+        # 稍后删除（在下一个循环）
+        obj2.deleteLater()
+        print(self.obj1.children())
+        # obj3.deleteLater()
 
 
 if __name__ == '__main__':
