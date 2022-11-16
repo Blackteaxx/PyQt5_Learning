@@ -55,7 +55,9 @@ menu.addSeparator()
 menu.addAction(exit_action)
 
 btn.setMenu(menu)
+btn.setFlat(True)
 # ************菜单的设置*******************end
+
 # 2.3 展示控件
 window.show()
 btn.showMenu()
