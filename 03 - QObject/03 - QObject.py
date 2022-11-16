@@ -130,7 +130,7 @@ class Window(QWidget):
         # label3.setParent(win_root)
         # label3.setText('label2')
         #
-        # btn = QPushButton(win_root)
+        # btn = 05-QPushButton(win_root)
         # btn.setText('button')
         # btn.move(100, 100)
         #
@@ -172,7 +172,7 @@ class Window(QWidget):
         # ************API练习*******************end
 
         # ************案例1*******************start
-        # btn = QPushButton(self)
+        # btn = 05-QPushButton(self)
         # btn.setText('click me')
         #
         # btn.clicked.connect(lambda: print("点我？"))
@@ -199,14 +199,14 @@ class Window(QWidget):
         # ************API*******************start
         # obj = QObject()
         # w = QWidget()
-        # btn = QPushButton()
+        # btn = 05-QPushButton()
         # label = QLabel()
         #
         # objs = [obj, w, btn, label]
         # for o in objs:
         #     # print(o.isWidgetType())
         #     # print(o.inherits('QWidget'))
-        #     print(o.inherits('QPushButton'))
+        #     print(o.inherits('05-QPushButton'))
         # ************API*******************end
 
         # ************案例*******************start
